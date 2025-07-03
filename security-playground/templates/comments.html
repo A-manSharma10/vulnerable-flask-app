@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Comments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ username }}</h1>
+        <form method="POST">
+            <label>Leave a comment:</label>
+            <textarea name="comment" placeholder="Your comment"></textarea>
+            <button type="submit">Post</button>
+        </form>
+
+        <h2>All Comments</h2>
+        {% for c in comments %}
+            <div class="comment">
+                <p>{{ c[1]|safe }}</p>
+                <a href="?delete={{ c[0] }}">Delete</a>
+            </div>
+        {% endfor %}
+
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
