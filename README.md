@@ -52,16 +52,16 @@ python app.py
 
 4️⃣ Open your browser and go to http://127.0.0.1:5000
 
-##Default Credentials
+Default Credentials
 Username	Password
 admin	admin123
 
-##✏️ Test Vulnerabilities
+✏️ Test Vulnerabilities
 SQL Injection: Try ' OR '1'='1 in username field
 
 XSS: Try <script>alert('XSS')</script> in comments
 
-##📜 License
+📜 License
 This project is for learning only — no warranty, no liability.
 
 Made with ❤️ by Aman Sharma
